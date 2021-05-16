@@ -9,9 +9,10 @@ function init() {
   var renderer = new THREE.WebGLRenderer();
   renderer.setClearColor(new THREE.Color(0x000000));
   renderer.setSize(window.innerWidth, window.innerHeight);
-  // renderer.shadowMap.enabled = true;
+  //增加物体阴影
+  renderer.shadowMap.enabled = true;
 
-  // createTree(scene);
+  createTree(scene);
   // createHouse(scene);
   // createGroundPlane(scene);
   // createBoundingWall(scene);
@@ -67,6 +68,7 @@ function init() {
   camera.lookAt(scene.position);
 
   // add spotlight for the shadows
+  //光 ，原理和 相机差不多
   var spotLight = new THREE.SpotLight(0xFFFFFF);
   spotLight.position.set(-40, 40, -15);
   spotLight.castShadow = true;
@@ -79,6 +81,7 @@ function init() {
   // spotLight.shadow.mapSize = new THREE.Vector2(1024, 1024);
   scene.add(spotLight);
 
+  //环境光 ambienlight
   var ambienLight = new THREE.AmbientLight(0x353535);
   scene.add(ambienLight);
 

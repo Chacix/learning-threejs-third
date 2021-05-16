@@ -126,7 +126,7 @@ function init() {
         requestAnimationFrame(render);
         renderer.render(scene, camera);
     }
-
+    // 页面自适应
     function onResize() {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();

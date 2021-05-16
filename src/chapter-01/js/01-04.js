@@ -76,8 +76,10 @@ function init() {
     renderScene();
 
     function renderScene() {
+        //左上角的是图画
         stats.update();
-
+        
+        //动画的叠加
         // rotate the cube around its axes
         cube.rotation.x += 0.02;
         cube.rotation.y += 0.02;

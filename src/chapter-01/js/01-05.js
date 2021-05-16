@@ -84,6 +84,7 @@ function init() {
     };
 
     var gui = new dat.GUI();
+    //这里用到了arguments
     gui.add(controls, 'rotationSpeed', 0, 0.5);
     gui.add(controls, 'bouncingSpeed', 0, 0.5);
 
